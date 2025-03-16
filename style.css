@@ -79,7 +79,56 @@ body{
   }
   
   .nav-links a:hover {
-    border-color: #1b4366;
+    border-color: #1b4366; 
     color: #ffffff;
   }
+
+  .mainhead {
+    font-size: 100px;
+    color: #f2e9fc;
+    font-weight: bold;
+    margin-top: 200px; /* Ensures it appears below the top bar */
+    text-align: left;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
+  .subhead {
+    font-size: 18px;
+    color: #b0a8b9; /* Softer tone for the quote */
+    font-style: italic;
+    margin-top: 20px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInSlide 1s 0.5s ease-in-out forwards; /* Delayed fade-in for subhead */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Subhead smooth fade-in and slide-up effect */
+  @keyframes fadeInSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
