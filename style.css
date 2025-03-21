@@ -26,14 +26,17 @@ body{
     display: flex;
     justify-content: space-between; /* Space between logo and menu */
     align-items: center; 
-    padding: 0px ;
+      padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     background: linear-gradient(150deg, rgb(5, 36, 46), rgb(14, 80, 82));
-    
+    .top-bar {
+    padding: 10px 20px;
+}
+
 }
 
 .nav-links{
@@ -88,7 +91,7 @@ body{
     color: #f2e9fc;
     font-weight: bold;
     margin-top: 200px; /* Ensures it appears below the top bar */
-    text-align: left;
+    text-align: right;
     text-transform: uppercase;
     animation: fadeIn 1s ease-in-out forwards;
   }
@@ -106,13 +109,13 @@ body{
   
   .subhead {
     font-size: 18px;
-    color: #b0a8b9; /* Softer tone for the quote */
+    color: #b0a8b9; 
     font-style: italic;
     margin-top: 20px;
-    text-align: left;
+    text-align: right;
     opacity: 0;
     transform: translateY(10px);
-    animation: fadeInSlide 1s 0.5s ease-in-out forwards; /* Delayed fade-in for subhead */
+    animation: fadeInSlide 1s 0.5s ease-in-out forwards;
   }
   @keyframes fadeIn {
     from {
@@ -132,3 +135,20 @@ body{
       transform: translateY(0);
     }
   }
+
+
+  /* logo */
+  .image-section img {
+    padding: 0%;
+    max-width: 60%; /* Scale the image down */
+    height: auto;
+    border-radius: 15px;
+    opacity: 0.8; /* Slight fade to push focus to text */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05); /* Subtle hover zoom effect */
+}
+
+
