@@ -1,20 +1,21 @@
-/* Background image */
-.bgimage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh; 
-    background: url('Background.jpg') no-repeat center center/cover;
-    filter: blur(4px);
-    z-index: -1; /* Push background behind content, basically a layer positioner*/
-}
-
 /* logo */
 .logo {
-    max-width: 80px; /* Small logo size for better readability */
+    max-width: 100px; /* Small logo size for better readability */
     height: auto;
+    animation: FadeIn 1s ease-in-out;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 body{
     background-color: rgb(1, 21, 21);
@@ -140,7 +141,7 @@ body{
   /* logo */
   .image-section img {
     padding: 0%;
-    max-width: 60%; /* Scale the image down */
+    max-width: 20%; /* Scale the image down */
     height: auto;
     border-radius: 15px;
     opacity: 0.8; /* Slight fade to push focus to text */
