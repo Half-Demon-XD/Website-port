@@ -57,8 +57,8 @@ body{
 }
 
 .nav-links a {
-    color: #f2e9fc; /* Light color for links */
-    text-decoration: none; /* Remove underline from links */
+    color: #f2e9fc; 
+    text-decoration: none; 
     font-size: 16px; 
     transition: color 0.3s ease; /* Smooth hover effect animation ( Necessary haha) */
 }
@@ -92,7 +92,7 @@ body{
     color: #f2e9fc;
     font-weight: bold;
     margin-top: 200px; /* Ensures it appears below the top bar */
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
     animation: fadeIn 1s ease-in-out forwards;
   }
@@ -113,7 +113,7 @@ body{
     color: #b0a8b9; 
     font-style: italic;
     margin-top: 20px;
-    text-align: right;
+    text-align: center;
     opacity: 0;
     transform: translateY(10px);
     animation: fadeInSlide 1s 0.5s ease-in-out forwards;
