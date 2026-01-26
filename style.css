@@ -160,4 +160,47 @@ body{
     transform: scale(1.05); /* Subtle hover zoom effect */
 }
 
+.signup-form {
+    background: linear-gradient(150deg, rgb(5, 36, 46), rgb(14, 80, 82));
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+    color: #f2e9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.signup-form input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.signup-form .signupformsubbtn {
+    background-color: #1ca7ba;   
+    color: white;
+    padding: 10px 30px;           
+    border-radius: 6px
+    ;          
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form input:focus {
+    border-color: #007bff; /* blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder style */
+.signup-form input::placeholder {
+    color: #888;
+    font-style: italic;
+}
