@@ -160,9 +160,9 @@ body{
 .image-section img:hover {
     transform: scale(1.05); /* Subtle hover zoom effect */
 }
-
+/* signup/login form using same style */
 .signup-form {
-    background: linear-gradient(150deg, rgb(5, 36, 46), rgb(14, 80, 82));
+    background: linear-gradient(150deg, rgb(62, 123, 144), rgb(14, 63, 65));
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -206,3 +206,14 @@ body{
     color: #888;
     font-style: italic;
 }
+.signup-form p {
+    margin-top: 15px;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .signup-form p a {
+    color: #1ca7ba;
+    text-decoration: none;
+    font-weight: bold;
+  }
