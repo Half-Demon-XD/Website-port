@@ -3,12 +3,12 @@ console.log("JS Loaded");
 // Wait until page loads
 document.addEventListener("DOMContentLoaded", function () {
 
-    const loginForm = document.getElementById("loginForm");
+    const LoginForm = document.getElementById("LoginForm");
 
     // Only run if we're on the login page
-    if (loginForm) {
+    if (LoginForm) {
 
-        loginForm.addEventListener("submit", function (event) {
+        LoginForm.addEventListener("submit", function (event) {
             event.preventDefault(); // stop page refresh
 
             const email = document.getElementById("email").value;
