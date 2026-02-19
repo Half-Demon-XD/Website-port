@@ -1,15 +1,15 @@
 console.log("JS Loaded");
 
-// Wait until page loads
 document.addEventListener("DOMContentLoaded", function () {
 
-    const LoginForm = document.getElementById("LoginForm");
+    const loginForm = document.getElementById("loginForm");
 
-    // Only run if we're on the login page
-    if (LoginForm) {
+    if (loginForm) {
+        // to check in console if the form is found
+        console.log("Login form found"); 
 
-        LoginForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // stop page refresh
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
@@ -18,6 +18,5 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Email:", email);
             console.log("Password:", password);
         });
-
     }
 });
