@@ -232,6 +232,7 @@ body{
 .main-head-container {
     max-width: 50%;
     position: relative;
+    margin-top: 200px;
 }
 
 .main-head-container::before {
@@ -244,6 +245,49 @@ body{
     left: -100px;
     z-index: -1;
 }
+
+
+
+/* RIGHT SIDE */
+.sphere-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#sphere-container {
+    width: 500px;
+    height: 500px;
+}
+
+@media (max-width: 900px) {
+    #sphere-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        filter: blur(25px);
+        opacity: 0.25;
+        pointer-events: none; /* ensures it doesn’t block touch */
+        z-index: 0;
+    }
+
+    .main-head-container {
+        position: relative;
+        z-index: 1; /* keep text above sphere */
+    }
+
+    .main-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /* Main Heading "half" */
 .mainhead {
@@ -281,6 +325,42 @@ body{
 }
 
 
+
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  background: transparent;
+  border: 1px solid rgb(14, 165, 183);
+  color: #0ea5b7;
+
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.resume-btn-container {
+  margin-top: 20px;
+}
+.resume-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.resume-btn:hover {
+  background: #0ea5b7;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.resume-btn:hover .resume-icon {
+  filter: brightness(10);
+}
   
 
 
@@ -429,3 +509,8 @@ body{
         margin: 0 auto;
     }
 }
+
+
+
+
+
