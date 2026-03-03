@@ -1,8 +1,8 @@
 /* logo */
 .logo {
-    max-width: 100px; /* Small logo size for better readability */
+    max-width: 10px; /* Small logo size for better readability */
     height: auto;
-    animation: FadeIn 1s ease-in-out;
+    animation: fadeIn 100s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -20,6 +20,7 @@
 body{
     height: 100%;
     background-color: rgb(1, 21, 21);
+    margin: 0;
 }
 
 
@@ -28,17 +29,13 @@ body{
     display: flex;
     justify-content: space-between; /* Space between logo and menu */
     align-items: center; 
-      padding: 10px 20px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     background: linear-gradient(150deg, rgb(5, 36, 46), rgb(14, 80, 82));
-    .top-bar {
-    padding: 10px 20px;
-}
-
 }
 
 .nav-links{
@@ -49,7 +46,6 @@ body{
     display: flex;
     list-style-type: none;  
     padding: 0 60px ;
-    display: flex;
 }
 
 .nav-links ul li {
@@ -71,95 +67,83 @@ body{
     color: #f2e9fc; 
     text-decoration: none; 
     font-size: 16px; 
-    transition: color 0.3s ease; /* Smooth hover effect animation ( Necessary haha) */
+    display: inline-block;
+    transition: transform 0.5s ease, color 0.3s ease; /* Smooth hover effect animation ( Necessary haha) */
 }
 
 /* Hover: Text Flip */
-.nav-links a {
-    text-decoration: none;
-    color: #f2e9fc;
-    display: inline-block;
-    transition: transform 0.5s ease;
-  }
-  
-  .nav-links a:hover {
+.nav-links a:hover {
     transform: rotateY(360deg);
-  }
-  
-  /* Hover: Circle Border Effect */
-.nav-links a {
-    transition: all 0.4s ease-in;
-  }
-  
-  .nav-links a:hover {
-    border-color: #1b4366; 
     color: #ffffff;
-  }
+}
 
-  .mainhead {
-    font-size: 100px;
+/* Headings */
+.mainhead {
+    font-size: 1000px;
     color: #f2e9fc;
     font-weight: bold;
-    margin-top: 200px; /* Ensures it appears below the top bar */
-    text-align: center;
+    margin-top: 0;               /* removes 200px push */
+    text-align: left;           /* align left */
     text-transform: uppercase;
     animation: fadeIn 1s ease-in-out forwards;
-  }
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .subhead {
+/* Subheading */
+.subhead {
     font-size: 18px;
     color: #b0a8b9; 
     font-style: italic;
     margin-top: 20px;
-    text-align: center;
+    text-align: left;      /* changed from center */
     opacity: 0;
     transform: translateY(10px);
     animation: fadeInSlide 1s 0.5s ease-in-out forwards;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Subhead smooth fade-in and slide-up effect */
-  @keyframes fadeInSlide {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-
-  /* logo */
-  .image-section img {
-    padding: 0%;
-    max-width: 20%; /* Scale the image down */
-    height: auto;
-    border-radius: 15px;
-    opacity: 0.8; /* Slight fade to push focus to text */
-    transition: transform 0.3s ease-in-out;
 }
 
-.image-section img:hover {
-    transform: scale(1.05); /* Subtle hover zoom effect */
+/* Subhead smooth fade-in and slide-up effect */
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+
+/* main sectnion layout */
+.main-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 150px 80px;
+}
+
+/* LEFT SIDE */
+.main-head-container {
+    width: 50%;
+}
+
+/* Resume button */
+.resume-btn-container {
+    margin-top: 30px;
+}
+
+/* social*/
+.main-socials {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.main-socials a {
+    text-decoration: none;
+    color: #f2e9fc;
+    background: rgba(255,255,255,0.08);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
 /* signup/login form using same style */
 .signup-form {
     background: linear-gradient(150deg, rgb(62, 123, 144), rgb(14, 63, 65));
@@ -168,9 +152,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    margin: 0 auto;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin: 200px auto;
     color: #f2e9fc;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -188,8 +170,7 @@ body{
     background-color: #1ca7ba;   
     color: white;
     padding: 10px 30px;           
-    border-radius: 6px
-    ;          
+    border-radius: 6px;          
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -206,14 +187,15 @@ body{
     color: #888;
     font-style: italic;
 }
+
 .signup-form p {
     margin-top: 15px;
     font-size: 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+}
 
-  .signup-form p a {
+.signup-form p a {
     color: #1ca7ba;
     text-decoration: none;
     font-weight: bold;
-  }
+}

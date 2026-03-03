@@ -29,3 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Toggle mobile menu
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active"); // show/hide menu
+            menuToggle.classList.toggle("active"); // animate hamburger
+        });
+    }
+});
